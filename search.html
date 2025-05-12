@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>二维码查找系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <input type="text" id="inputKey" placeholder="输入数字">
+    <button onclick="search()">查询</button>
+    <p id="result"></p>
+
+    <script>
+        const dataMap = { "1":"A", "2":"B", "3":"C" };
+        function search() {
+            const key = document.getElementById('inputKey').value;
+            document.getElementById('result').innerText = dataMap[key] || "未找到";
+        }
+    </script>
+</body>
+</html>
